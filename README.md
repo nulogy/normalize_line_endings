@@ -20,12 +20,4 @@ Or install it yourself as:
 
 ## Usage
 
-Run tests by cd'ing to the root of the gem directory and running `rake test`
-
-```
-class Post < ApplicationRecord
-  normalize_line_endings :only => [:foo, :bar, :biz]
-end
-```
-
-See the tests for more example usages.
+Run tests by cd'ing to the root of the gem directory and running `rake`
