@@ -5,14 +5,15 @@ require "active_support"
 module NormalizeLineEndings
   extend ActiveSupport::Concern
 
-  module ClassMethods
+  class_methods do
     def normalize_line_endings(*opts)
       @normalize_line_endings_options = opts.first.is_a?(Hash) ? opts.first : { only: opts } unless opts.empty?
 
       class << self; attr_reader :normalize_line_endings_options; end
 
-      before_validation { |record| record.normalize_line_endings }
+      before_validation { |record| record.normalize_line_endings } # rubocop:disable Style/SymbolProc
     end
+
     alias_method :normalize_line_endings_for, :normalize_line_endings
   end
 
