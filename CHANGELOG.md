@@ -2,9 +2,15 @@
 
 ## master (unreleased)
 
+## 0.0.5 (2021-07-13)
+
+* Add support Rails 6.1
+* Drop support for Rails 5.2
+* Bump development dependencies
+
 ## 0.0.4 (2020-11-05)
 
-* Add appraisals gem 
+* Add appraisals gem
 
 ## 0.0.3 (2020-11-03)
 
