@@ -4,7 +4,8 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.6
+  SuggestExtensions: false
+  TargetRubyVersion: 3.0
 
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
