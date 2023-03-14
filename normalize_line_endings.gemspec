@@ -16,7 +16,8 @@ Gem::Specification.new do |spec|
     "homepage_uri" => "https://github.com/nulogy/normalize_line_endings",
     "changelog_uri" => "https://github.com/nulogy/normalize_line_endings/blob/master/CHANGELOG.md",
     "source_code_uri" => "https://github.com/nulogy/normalize_line_endings",
-    "bug_tracker_uri" => "https://github.com/nulogy/normalize_line_endings/issues"
+    "bug_tracker_uri" => "https://github.com/nulogy/normalize_line_endings/issues",
+    "rubygems_mfa_required" => "true"
   }
 
   # Specify which files should be added to the gem when it is released.
@@ -27,15 +28,20 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.required_ruby_version = ">= 2.6"
+  spec.required_ruby_version = ">= 3.0"
 
-  spec.add_runtime_dependency "activesupport", ">= 5.2.4", "< 6.1"
+  spec.add_runtime_dependency "activesupport", ">= 6.1", "< 7.1"
 
-  spec.add_development_dependency "activemodel", ">= 5.2.4.3", "< 6.1"
-  spec.add_development_dependency "appraisal", "~> 2.3"
+  spec.add_development_dependency "activemodel", ">= 6.1", "< 7.1"
+  spec.add_development_dependency "appraisal", "~> 2.4"
+
+  # Explicitly version bundler to avoid breaking the appraisal gem.
+  # Remove when a new version of the appraisal gem is released.
+  spec.add_development_dependency "bundler", "2.2.10"
+
   spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rspec", "~> 3.10"
-  spec.add_development_dependency "rubocop", "~> 0.93"
-  spec.add_development_dependency "rubocop-performance", "~> 1.8"
-  spec.add_development_dependency "rubocop-rspec", "~> 1.44"
+  spec.add_development_dependency "rspec", "~> 3.12"
+  spec.add_development_dependency "rubocop", "~> 1.48"
+  spec.add_development_dependency "rubocop-performance", "~> 1.16"
+  spec.add_development_dependency "rubocop-rspec", "~> 2.19"
 end

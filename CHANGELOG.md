@@ -2,9 +2,13 @@
 
 ## master (unreleased)
 
+## 0.0.6 (2023-03-14)
+
+* Support Rails 7.0
+
 ## 0.0.4 (2020-11-05)
 
-* Add appraisals gem 
+* Add appraisals gem
 
 ## 0.0.3 (2020-11-03)
 
