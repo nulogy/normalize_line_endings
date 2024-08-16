@@ -19,7 +19,7 @@ module NormalizeLineEndings
 
   def normalize_line_endings
     attrs_for_normalized_line_endings.each do |attr, value|
-      send("#{attr}=", value.gsub(/\r\n/, "\n")) if value.respond_to?(:gsub)
+      send(:"#{attr}=", value.gsub("\r\n", "\n")) if value.respond_to?(:gsub)
     end
   end
 
