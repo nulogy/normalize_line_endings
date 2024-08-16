@@ -2,6 +2,11 @@
 
 ## master (unreleased)
 
+## 0.0.7 (2024-08-16)
+
+* Support Rails 7.1 and Ruby 3.1
+* Drop support for Rails 6.1 and Ruby 3.0
+
 ## 0.0.6 (2023-03-14)
 
 * Support Rails 7.0
