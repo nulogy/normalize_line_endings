@@ -1,6 +1,12 @@
 # Change log
 
-## master (unreleased)
+## main (unreleased)
+
+## 0.0.8 (2025-06-20)
+
+* Support Rails 7.2 and Ruby 3.3
+* Drop support for Rails 7.1
+* Drop support for Ruby 3.1 and Ruby 3.2
 
 ## 0.0.7 (2024-08-16)
 
