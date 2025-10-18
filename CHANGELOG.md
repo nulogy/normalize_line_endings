@@ -2,6 +2,11 @@
 
 ## main (unreleased)
 
+## 0.0.9 (2025-10-18)
+
+* Support Rails 8.0
+* Drop support for Rails 7.1
+
 ## 0.0.8 (2025-06-20)
 
 * Support Rails 7.2 and Ruby 3.3

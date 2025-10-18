@@ -8,6 +8,7 @@ module MockAttributes
   include ActiveModel::Validations
   include ActiveModel::Validations::Callbacks
   include NormalizeLineEndings
+
   included do
     attr_accessor :foo, :bar, :biz, :baz
   end
@@ -26,36 +27,43 @@ end
 
 class NormalizeAllMockRecord
   include MockAttributes
+
   normalize_line_endings
 end
 
 class NormalizeOnlyOneMockRecord
   include MockAttributes
+
   normalize_line_endings only: :foo
 end
 
 class NormalizeOneMockRecord
   include MockAttributes
+
   normalize_line_endings_for :foo
 end
 
 class NormalizeOnlyThreeMockRecord
   include MockAttributes
+
   normalize_line_endings only: [:foo, :bar, :biz]
 end
 
 class NormalizeThreeMockRecord
   include MockAttributes
+
   normalize_line_endings_for :foo, :bar, :biz
 end
 
 class NormalizeExceptOneMockRecord
   include MockAttributes
+
   normalize_line_endings except: :foo
 end
 
 class NormalizeExceptThreeMockRecord
   include MockAttributes
+
   normalize_line_endings except: [:foo, :bar, :biz]
 end
 
